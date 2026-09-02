@@ -1,6 +1,7 @@
 from random import choice
 import time
 
+#TYPEWRITER EFFECT FUNCTION
 def type_line(text, delay=0.02, pause=0.6):
     for char in text:
         print(char, end="", flush=True)
@@ -47,6 +48,26 @@ def handle_choice_2(choice):
         type_line("The faint heat of recent weapons fire still clings to the deck.")
         type_line("A smear of blood marks the bulkhead ahead.")
         type_line("Someone passed through here recently.")
+    elif choice == "2":
+        type_line("You activate your armor's lumen.")
+        type_line("White light cuts through the darkness.")
+        type_line("The corridor resolves around you in harsh detail.")
+        type_line("Spent bolt casings litter the deck.")
+        type_line("Two mortal crewmen lie motionless near the bulkhead.")
+        type_line("Farther ahead, something catches the light.")
+        type_line("A bolter bearing the winged sowrd of the First Legion.")
+        type_line("Then, somewhere beyond the reach of the beam, metal scrapes against metal.")
+    elif choice == "3":
+        type_line("You remain motionless at the threshold.")
+        type_line("For several seconds, there is only the low groan of the wounded ship.")
+        type_line("Then you hear it.")
+        type_line("Ceramite scraping softly against metal.")
+        type_line("Far ahead.")
+        type_line("A burst of static whispers across your damaged vox.")
+        type_line(f"\"...Brother {player_name}...\"")
+        type_line("The transmission vanishes almost as quickly as it appeared.")
+    else:
+        print("Invalid choice.")
 
          
 #INTRO / SCENE 1
@@ -60,6 +81,8 @@ type_line("You are one warrior among thousands.")
 type_line("And aboard one forgotten vessel, your war is about to become very small.")
 print()
 
+
+
 #PLAYER NAME INPUT
 player_name = input("Enter your name: ")
 #WHILE LOOP TO ENSURE NAME IS NOT EMPTY
@@ -68,11 +91,12 @@ while player_name == "":
     player_name = input("Enter your name: ")
 print()
 
+
+
 type_line(f"Brother {player_name} of the I Legion. Son of the Lion.")
 
 print()
 type_line("You awaken beneath shattered plating.")
-print()
 type_line("Your armor is damaged.")
 type_line("Your squad vox is silent.")
 type_line("Your bolter is gone.", pause=0.8)
@@ -106,7 +130,7 @@ type_line("Beyond it, the corridor disappears into darkness.")
 print()
 print("What do you do?")
 print()
-print("1. Enter the darkness, relying on instinct and your armor's auto-senses.")
+print("1. Enter the darkness, relying on instincts and your armor's auto-senses.")
 print("2. Activate your armor's illumination and advance.")
 print("3. Remain at the threshold, listening for any signs of movement.")
 print()
@@ -114,3 +138,7 @@ print()
 choice = input("++ Choose an option: ")
 print()
 handle_choice_2(choice)
+
+print()
+type_line("Whatever lies ahead, remaining here will reveal nothing more.")
+type_line("You advance.")
